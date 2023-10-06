@@ -8,6 +8,8 @@ function showPreview(){
     var jsCode = ""+document.getElementById("jsCode").value+"";
     var frame = document.getElementById("preview-window").contentWindow.document;
     frame.open();
+    const frameData =htmlCode+cssCode+jsCode
+    localStorage.setItem("frameData" ,frameData)
     frame.write(htmlCode+cssCode+jsCode);
     frame.close();
 }
